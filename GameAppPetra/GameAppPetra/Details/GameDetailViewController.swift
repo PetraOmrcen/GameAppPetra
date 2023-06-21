@@ -57,9 +57,8 @@ class GameDetailViewController: UIViewController {
         self.gameId = gameId
         super.init(nibName: nil, bundle: nil)
     }
+    
     required init?(coder: NSCoder) {fatalError("init(coder:) has not been implemented")}
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +88,6 @@ class GameDetailViewController: UIViewController {
         stack.addAsSubviewOf(contentView)
         
         stack.addArrangedSubviews(released, rating, webside)
-        
     }
     
     func styleViews(){
@@ -118,7 +116,6 @@ class GameDetailViewController: UIViewController {
         showMoreButton.addTarget(self, action: #selector(showMoreButtonTapped), for: .touchUpInside)
         showMoreButton.setTitleColor(.white, for: .normal)
         showMoreButton.titleLabel?.font = UIFont(name: "Panchang-Bold", size: 10)
-        
         
         backroundImage.loadFrom(URLAddress: detailModel.backgroundImage)
         backroundImage.layer.borderWidth = 3.0
@@ -162,7 +159,6 @@ class GameDetailViewController: UIViewController {
         gameName.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(30)
-            
         }
         
         backroundImage.snp.makeConstraints {

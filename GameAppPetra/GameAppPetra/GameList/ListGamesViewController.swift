@@ -15,23 +15,23 @@ class ListGamesController: UIViewController {
     private var genreList: GenresResponse = GenresResponse(count: 0, next: "", previous: "", results: [])
     private var selectedGenresList = Preference.selectedGenres
     private let searchController = UISearchController(searchResultsController: nil)
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         getGenres()
         addViews()
         styleViews()
         setupConstraints()
     }
-    
+
     @objc func addButtonTapped(){
         let settingsVC = SettingsViewController()
         settingsVC.delegate = self
         present(settingsVC, animated: true)
-        
+
     }
-    
+
     func getGenres(){
         Task {
             if let cellList1 =  try await responseAPI.fetchGenres() {
@@ -41,7 +41,7 @@ class ListGamesController: UIViewController {
             }
         }
     }
-    
+
     func loadDataToModel() {
         model = []
         let selectedGenresList = Preference.selectedGenres
@@ -54,30 +54,30 @@ class ListGamesController: UIViewController {
             }
         }
     }
-    
+
     func addViews() {
         tableView.addAsSubviewOf(view)
     }
-    
+
     func styleViews() {
-        
+
         navigationItem.setHidesBackButton(true, animated: true)
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
         navigationItem.rightBarButtonItem = addButton
-        
+
         tableView.backgroundColor(.black)
         tableView.separatorStyle = .none
         tableView.register(GameCell.self, forCellReuseIdentifier: GameCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = UITableView.automaticDimension
-        
+
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
-    
+
     func setupConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
@@ -86,11 +86,11 @@ class ListGamesController: UIViewController {
 }
 
 extension ListGamesController: UITableViewDataSource, UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: GameCell.identifier) else {
             return UITableViewCell()
@@ -99,31 +99,19 @@ extension ListGamesController: UITableViewDataSource, UITableViewDelegate {
         if let configurable = cell as? Configurable, index >= 0 && index < model.count {
             configurable.configure(with: model[indexPath.row])
         }
-        
+
         cell.backgroundColor(.black)
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let detail = GameDetailViewController(gameId: model[indexPath.row].gameId)
         navigationController?.pushViewController(detail, animated: true)
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
-    func presentWithCoolAnimation(destinationVC: UIViewController) {
-        let animationOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .curveEaseInOut]
-        
-        let animationDuration: TimeInterval = 0.5
-        
-        UIView.transition(with: view.window!, duration: animationDuration, options: animationOptions, animations: {
-            // Perform any additional animations or changes during the transition
-            self.present(destinationVC, animated: false, completion: nil)
-        }, completion: nil)
-    }
-    
 }
 
 extension ListGamesController: ListGamesControllerDelegate{
@@ -139,14 +127,13 @@ extension ListGamesController: UISearchResultsUpdating {
             filterModel(with: searchText)
         }
     }
-    
+
     private func filterModel(with searchText: String) {
         if searchText.isEmpty {
             loadDataToModel()
         } else {
             model = model.filter { $0.name.lowercased().contains(searchText) }
         }
-        
         tableView.reloadData()
     }
 }

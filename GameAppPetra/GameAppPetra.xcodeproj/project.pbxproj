@@ -10,7 +10,6 @@
 		B4C6FA4F681465ACC0E863C4 /* Pods_GameAppPetra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB087F178C98034F2C9CC04A /* Pods_GameAppPetra.framework */; };
 		D29839292A429BF200B0E8BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29839282A429BF200B0E8BF /* AppDelegate.swift */; };
 		D298392B2A429BF200B0E8BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298392A2A429BF200B0E8BF /* SceneDelegate.swift */; };
-		D298392D2A429BF200B0E8BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298392C2A429BF200B0E8BF /* ViewController.swift */; };
 		D29839332A429BF200B0E8BF /* GameAppPetra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D29839312A429BF200B0E8BF /* GameAppPetra.xcdatamodeld */; };
 		D29839352A429BF600B0E8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29839342A429BF600B0E8BF /* Assets.xcassets */; };
 		D29839382A429BF600B0E8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29839362A429BF600B0E8BF /* LaunchScreen.storyboard */; };
@@ -40,7 +39,7 @@
 		D29839792A42A70700B0E8BF /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29839782A42A70700B0E8BF /* BaseViewProtocol.swift */; };
 		D298397D2A42A74000B0E8BF /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298397C2A42A74000B0E8BF /* Reusable.swift */; };
 		D298397F2A42A74E00B0E8BF /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298397E2A42A74E00B0E8BF /* Configurable.swift */; };
-		D29839822A42A79E00B0E8BF /* PreferenceGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29839812A42A79E00B0E8BF /* PreferenceGenres.swift */; };
+		D29839822A42A79E00B0E8BF /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29839812A42A79E00B0E8BF /* Preference.swift */; };
 		D29839842A42A80200B0E8BF /* CALayer+AttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29839832A42A80200B0E8BF /* CALayer+AttributesBuilder.swift */; };
 		D29839862A42A81900B0E8BF /* UIButton+AttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29839852A42A81900B0E8BF /* UIButton+AttributesBuilder.swift */; };
 		D29839882A42A82E00B0E8BF /* UIImageView+AttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29839872A42A82E00B0E8BF /* UIImageView+AttributesBuilder.swift */; };
@@ -58,7 +57,6 @@
 		D29839252A429BF200B0E8BF /* GameAppPetra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameAppPetra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29839282A429BF200B0E8BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D298392A2A429BF200B0E8BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D298392C2A429BF200B0E8BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D29839322A429BF200B0E8BF /* GameAppPetra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameAppPetra.xcdatamodel; sourceTree = "<group>"; };
 		D29839342A429BF600B0E8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D29839372A429BF600B0E8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,7 +87,7 @@
 		D29839782A42A70700B0E8BF /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		D298397C2A42A74000B0E8BF /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		D298397E2A42A74E00B0E8BF /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
-		D29839812A42A79E00B0E8BF /* PreferenceGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceGenres.swift; sourceTree = "<group>"; };
+		D29839812A42A79E00B0E8BF /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		D29839832A42A80200B0E8BF /* CALayer+AttributesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+AttributesBuilder.swift"; sourceTree = "<group>"; };
 		D29839852A42A81900B0E8BF /* UIButton+AttributesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AttributesBuilder.swift"; sourceTree = "<group>"; };
 		D29839872A42A82E00B0E8BF /* UIImageView+AttributesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AttributesBuilder.swift"; sourceTree = "<group>"; };
@@ -155,20 +153,16 @@
 			isa = PBXGroup;
 			children = (
 				D298394F2A42A48F00B0E8BF /* GenreList */,
-				D29839582A42A4EF00B0E8BF /* Settings */,
-				D298395B2A42A54700B0E8BF /* Details */,
-				D29839602A42A59300B0E8BF /* GameList */,
 				D29839672A42A5FE00B0E8BF /* Onboarding */,
+				D29839582A42A4EF00B0E8BF /* Settings */,
+				D29839602A42A59300B0E8BF /* GameList */,
+				D298395B2A42A54700B0E8BF /* Details */,
 				D298396C2A42A64800B0E8BF /* Network */,
 				D29839752A42A6DC00B0E8BF /* BaseView */,
 				D298397B2A42A72200B0E8BF /* TableViews */,
 				D298393F2A429D7C00B0E8BF /* Supporting */,
-				D29839282A429BF200B0E8BF /* AppDelegate.swift */,
-				D298392A2A429BF200B0E8BF /* SceneDelegate.swift */,
-				D29839812A42A79E00B0E8BF /* PreferenceGenres.swift */,
-				D298392C2A429BF200B0E8BF /* ViewController.swift */,
+				D29839812A42A79E00B0E8BF /* Preference.swift */,
 				D29839342A429BF600B0E8BF /* Assets.xcassets */,
-				D29839362A429BF600B0E8BF /* LaunchScreen.storyboard */,
 				D29839392A429BF600B0E8BF /* Info.plist */,
 				D29839312A429BF200B0E8BF /* GameAppPetra.xcdatamodeld */,
 			);
@@ -180,6 +174,9 @@
 			children = (
 				D29839802A42A77400B0E8BF /* AttributesBuilder */,
 				D29839402A429D8600B0E8BF /* Fonts */,
+				D29839282A429BF200B0E8BF /* AppDelegate.swift */,
+				D298392A2A429BF200B0E8BF /* SceneDelegate.swift */,
+				D29839362A429BF600B0E8BF /* LaunchScreen.storyboard */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -435,7 +432,6 @@
 				D29839332A429BF200B0E8BF /* GameAppPetra.xcdatamodeld in Sources */,
 				D29839622A42A5B500B0E8BF /* GameCellModel.swift in Sources */,
 				D298395D2A42A56000B0E8BF /* GameDetailViewController.swift in Sources */,
-				D298392D2A429BF200B0E8BF /* ViewController.swift in Sources */,
 				D29839702A42A67D00B0E8BF /* GameGenres.swift in Sources */,
 				D29839552A42A4CD00B0E8BF /* GenreCell.swift in Sources */,
 				D29839772A42A6F200B0E8BF /* BaseView.swift in Sources */,
@@ -456,7 +452,7 @@
 				D29839642A42A5CD00B0E8BF /* ListGamesViewController.swift in Sources */,
 				D298392B2A429BF200B0E8BF /* SceneDelegate.swift in Sources */,
 				D298395A2A42A50700B0E8BF /* SettingsViewController.swift in Sources */,
-				D29839822A42A79E00B0E8BF /* PreferenceGenres.swift in Sources */,
+				D29839822A42A79E00B0E8BF /* Preference.swift in Sources */,
 				D29839902A42A88C00B0E8BF /* UIText+ViewAttributesBuilder.swift in Sources */,
 				D29839722A42A69E00B0E8BF /* GameDetail.swift in Sources */,
 				D298397F2A42A74E00B0E8BF /* Configurable.swift in Sources */,

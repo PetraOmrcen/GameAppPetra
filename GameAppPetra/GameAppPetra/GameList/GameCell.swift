@@ -20,7 +20,6 @@ class GameCell: UITableViewCell, Reusable {
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
-    
     func addViews(){
         container.addAsSubviewOf(contentView)
         label.addAsSubviewOf(container)
@@ -51,7 +50,6 @@ class GameCell: UITableViewCell, Reusable {
             
         }
     }
-    
 }
 
 extension GameCell: Configurable {
@@ -60,10 +58,7 @@ extension GameCell: Configurable {
     func configure(with model: Any) -> Self {
         guard let model = model as? GameCellModel else { return self }
         label.text(model.name)
-        
-        
         return self
-        
     }
 
     private func getId(from string: String?) -> String? {

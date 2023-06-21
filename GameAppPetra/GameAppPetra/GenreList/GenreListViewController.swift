@@ -17,10 +17,8 @@ class GenreListViewController: UIViewController {
     private var model:[GenreCellModel] = []
     private let probaAPI = NetworkManager()
     private let tableView = UITableView()
-    
     private let loadingImage = UIImage()
     
-    // closure
     var buttonClickedHandler: (() -> Void)?
     var getDataHandler: (() -> Void)?
 
