@@ -33,37 +33,45 @@ I structured the folders by screen names so that it will be easier to navigate t
 The folders and files are as follows:
 
 ### Screens:
-- GenreList 
-Here is a Controller responsible for displaying the list of genres, also a button for saving genres in UserDefaults. It is used by the Onboarding screen and the Settings screen.
+- GenreList - Here is a Controller responsible for displaying the list of genres, also a button for saving genres in UserDefaults. It is used by the Onboarding screen and the Settings screen.
 
-- Onboarding 
-It only appears when the application is first launched. After that, the flag in User Defaults is changed and every second time the application is started, the GameList screen is displayed immediately. He uses the GenreList Controller where he makes minor changes to customize it for his needs.
+- Onboarding - It only appears when the application is first launched. After that, the flag in User Defaults is changed and every second time the application is started, the GameList screen is displayed immediately. He uses the GenreList Controller where he makes minor changes to customize it for his needs.
 
-- Settings 
-It appears when the user presses the + on the top left of the screen. It uses the GenreList controller to display a list of genres and makes minor changes to customize it for his needs.
+- Settings - It appears when the user presses the + on the top left of the screen. It uses the GenreList controller to display a list of genres and makes minor changes to customize it for his needs.
 
-- GameList 
-This screen displays all games from the selected genres using a TableView. Clicking on one of the cells with the name of the game opens a new screen with details.
+- GameList - This screen displays all games from the selected genres using a TableView. Clicking on one of the cells with the name of the game opens a new screen with details.
 
-- Details 
-The screen is used to display details about the selected game. It uses a ScrollView to successfully display all the data.
+- Details - The screen is used to display details about the selected game. It uses a ScrollView to successfully display all the data.
     
 ### Additional auxiliary files:
-- Network
-Folder containing API models and clients.
+- Network - Folder containing API models and clients.
 
-- BaseView
-There are protocols that determine the structure of the View in the project. If BaseView is inherited.
+- BaseView - There are protocols that determine the structure of the View in the project. If BaseView is inherited.
 
-- TableViews
-Auxiliary protocols for creating TableViews
+- TableViews - Auxiliary protocols for creating TableViews
 
-- Supporting
-It consists of imported fonts and AttributesBuilder files that extend existing classes to speed up and facilitate work.
+- Supporting - It consists of imported fonts and AttributesBuilder files that extend existing classes to speed up and facilitate work.
     
 #### Preference
 This file contains functions that set or retrieve values ​​from userDefaults.
 
 #### SceneDelegate
-I made a change that reads the data from userDefaults and checks the isFirstLaunch flag to find out if the application is being launched for the first time. With regard to the flag, it goes to the Onboarding screen or the ListGames screen.
+I made a change that reads the data from userDefaults and checks the isFirstLaunch flag to find out if the application is being launched for the first time. With regard to the flag, it goes to the Onboarding screen or the ListGames screen. I left the variable Preference.isFirstLaunch = false commented if you want to try again later and see the onboarding screen
 
+## Decisions, problems...
+
+- Images in TableView :  
+ 
+Biggest problem was loading genre background images to tableview. The reading and loading from API was slow and it broke the table. That is the reason I decided to load all images in advance (when the screen appears) and save them in the model instead of just savig the url. This helped because now the table looks normal and doesn't get confused. 
+
+- UserDefaults and models :  
+  
+I spent some time thinking about how to save selected genres in UserDefaults. In the first version, I saved only the id of the genre, but that turned out to be complicated because in the settings screen I would have to read all the genres from the API again and compare the ids and only then enter them into the model. That's why I decided to save the entire model in UserDefaults (but it's important to note that I only saved the url of the image, not the entire UIImage, and I loaded the image only when I went to enter data into the model).
+
+- GenreList, Onboarding and Settings:  
+
+I didn't want to repeat the code, so I thought about the best way to use the same GenreList controller in the Onboarding and settings screens. I added the GenreList controller to each of them as a child. The GenreList controller has colsures that I defined from the other two controllers to get the desired functionality. I wanted Onboarding to read data from the API and save it in the model, and Settings to read from UserDefaults.
+
+- Design :   
+  
+The design is simple and does not use any additional libraries. I used the colors that I think are most suitable for the given theme - video games.
