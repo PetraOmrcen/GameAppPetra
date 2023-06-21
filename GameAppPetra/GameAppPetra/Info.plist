@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Panchang-Bold.otf</string>
+		<string>Panchang-Extrabold.otf</string>
+		<string>Panchang-Extralight.otf</string>
+		<string>Panchang-Light.otf</string>
+		<string>Panchang-Medium.otf</string>
+		<string>Panchang-Regular.otf</string>
+		<string>Panchang-Semibold.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
