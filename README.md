@@ -9,7 +9,7 @@ AppGamePetra is a simple application consisting of 4 screens. When the applicati
 ## Getting started
 
 1. Use CocoaPods
-2. StoryBoard is remove from project
+2. StoryBoard is removed from project
 
 ## Dependencies 
 
@@ -66,7 +66,7 @@ Biggest problem was loading genre background images to TableView. The reading an
 
 - UserDefaults and models :  
   
-I spent some time thinking about how to save selected genres in UserDefaults. In the first version, I saved only the id of the genre, but that turned out to be complicated because in the settings screen I would have to read all the genres from the API again and compare the Ids and only then enter them into the model (GenreModel). That's why I decided to save the entire model in UserDefaults (but it's important to note that I only saved the url of the image, not the entire UIImage, and I loaded the image only when I went to enter data into the model (GenreCellModel)).
+I spent some time thinking about how to save selected genres in UserDefaults. In the first version, I saved only the ID of the genre, but that turned out to be complicated because in the settings screen I would have to read all the genres from the API again, compare the IDs and only then enter them into the model (GenreModel). That's why I decided to save the entire model in UserDefaults (but it's important to note that I only saved the url of the image, not the entire UIImage, and I loaded the image only when I went to enter data into the model (GenreCellModel)).
 
 - GenreList, Onboarding and Settings:  
 
