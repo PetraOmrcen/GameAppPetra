@@ -29,36 +29,37 @@ I structured the folders by screen names so that it will be easier to navigate t
 The folders and files are as follows:
 
 ### Screens:
-#### GenreList 
-Here is a Controller responsible for displaying the list of genres, also a button for saving genres in UserDefaults. It is used by the Onboarding screen and the Settings screen.
+    - GenreList 
+    Here is a Controller responsible for displaying the list of genres, also a button for saving genres in UserDefaults. It is used by the Onboarding screen and the Settings screen.
 
-#### Onboarding 
-It only appears when the application is first launched. After that, the flag in User Defaults is changed and every second time the application is started, the GameList screen is displayed immediately. He uses the GenreList Controller where he makes minor changes to customize it for his needs.
+    - Onboarding 
+    It only appears when the application is first launched. After that, the flag in User Defaults is changed and every second time the application is started, the GameList screen is displayed immediately. He uses the GenreList Controller where he makes minor changes to customize it for his needs.
 
-#### Settings 
-It appears when the user presses the + on the top left of the screen. It uses the GenreList controller to display a list of genres and makes minor changes to customize it for his needs.
+    - Settings 
+    It appears when the user presses the + on the top left of the screen. It uses the GenreList controller to display a list of genres and makes minor changes to customize it for his needs.
 
-#### GameList 
-This screen displays all games from the selected genres using a TableView. Clicking on one of the cells with the name of the game opens a new screen with details.
+    - GameList 
+    This screen displays all games from the selected genres using a TableView. Clicking on one of the cells with the name of the game opens a new screen with details.
 
-#### Details 
-The screen is used to display details about the selected game. It uses a ScrollView to successfully display all the data.
+    - Details 
+    The screen is used to display details about the selected game. It uses a ScrollView to successfully display all the data.
     
 ### Additional auxiliary files:
-#### Network
-Folder containing API models and clients.
+    - Network
+    Folder containing API models and clients.
 
-#### BaseView
-There are protocols that determine the structure of the View in the project. If BaseView is inherited.
+    - BaseView
+    There are protocols that determine the structure of the View in the project. If BaseView is inherited.
 
-#### TableViews
-Auxiliary protocols for creating TableViews
+    - TableViews
+    Auxiliary protocols for creating TableViews
 
-#### Supporting
-It consists of imported fonts and AttributesBuilder files that extend existing classes to speed up and facilitate work.
+    - Supporting
+    It consists of imported fonts and AttributesBuilder files that extend existing classes to speed up and facilitate work.
     
 #### Preference
 This file contains functions that set or retrieve values ​​from userDefaults.
 
 
 I made a change that reads the data from userDefaults and checks the isFirstLaunch flag to find out if the application is being launched for the first time. With regard to the flag, it goes to the Onboarding screen or the ListGames screen.
+
